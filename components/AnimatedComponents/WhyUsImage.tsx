@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import Image from "next/image";
-import WhyusImage from "@/public/images/why-us.webp";
+import WhyusImage from "@/public/images/why-us.jpeg";
 
 export default function WhyUsImage() {
   return (
