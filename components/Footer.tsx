@@ -3,12 +3,13 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 const sitemapLinks = [
-  { name: "الرئيسية", href: "#home" },
-  { name: "عنّا", href: "#about" },
-  { name: "خدماتنا", href: "#services" },
-  { name: "معرض الصور", href: "#gallery" },
-  { name: "الأسئلة الشائعة", href: "#faq" },
-  { name: "تواصل معنا", href: "#contact" },
+  { name: "الرئيسية", href: "/#home" },
+  { name: "عنّا", href: "/#about" },
+  { href: "/articles", name: "خدمات الضيافة" },
+  { name: "خدماتنا", href: "/#services" },
+  { name: "معرض الصور", href: "/#gallery" },
+  { name: "الأسئلة الشائعة", href: "/#faq" },
+  { name: "تواصل معنا", href: "/#contact" },
 ];
 
 export default function Footer({
