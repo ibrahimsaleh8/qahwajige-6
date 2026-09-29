@@ -1,16 +1,6 @@
 import { WhyUsSectionData } from "@/lib/responseType";
-import { Award, Clock, MapPin, User, LucideIcon } from "lucide-react";
 import WhyUsImage from "./AnimatedComponents/WhyUsImage";
-const iconMap: Record<string, LucideIcon> = {
-  award: Award,
-  clock: Clock,
-  shield: MapPin,
-  sparkles: User,
-  Award,
-  Clock,
-  Shield: Award,
-  Sparkles: User,
-};
+import WhyUsIcon from "./WhyUsIcon";
 
 export function WhyUsSection({
   description,
@@ -38,17 +28,9 @@ export function WhyUsSection({
             <ul className="space-y-5">
               {features &&
                 features.map((feature) => {
-                  const IconComponent =
-                    iconMap[
-                      feature.icon?.toLowerCase() as keyof typeof iconMap
-                    ] ||
-                    iconMap[feature.icon as keyof typeof iconMap] ||
-                    Award;
                   return (
                     <li key={feature.title} className="flex items-start gap-4">
-                      <div className="shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center">
-                        <IconComponent className="w-5 h-5 text-white" />
-                      </div>
+                      <WhyUsIcon icon={feature.icon} />
                       <div>
                         <p className="font-bold text-white mb-0.5">
                           {feature.title}
